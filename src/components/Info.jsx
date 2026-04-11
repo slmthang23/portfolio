@@ -1,52 +1,73 @@
-
-import profileImg from "../assets/profile.jpg";
-import myResume from "../assets/resume-05-2024.pdf";
-import "./Info.scss";
-
+import profileImg from '../assets/profile.jpg';
+import myResume from '../assets/resume.pdf';
+import { Phone, Mail, Link, Download } from 'lucide-react';
 
 export default function Info() {
-
     return (
-            <section id="info-cont" className="center show">
-                <header className="section-title center"><h2>Solomon Thang</h2></header>
-                
-                <ul id="infos" className="center">
-                    <li id="info" className="boxShadow">
-                        <div id="intro" className="center">
+        <section className="w-full center flex-col">
+            <header className="w-full center sticky top-0 h-[3rem] border-y-1 border-border1 bg-bg1">
+                <h1 className="text-xl font-extrabold text-primary">
+                    Solomon Thang
+                </h1>
+            </header>
 
-                            <img src={profileImg} alt=""/>
+            <div className="center my-[2rem]">
+                <div className="boxShadow">
+                    <div className="flex flex-col justify-center items-center gap-y-4 sm:flex-row sm:gap-x-8 sm:items-center px-4 mb-[0rem]">
+                        <img
+                            src={profileImg}
+                            alt="profile picture"
+                            className="w-[125px] sm:w-[200px]"
+                        />
 
-                            <ul id="details">
-                                <li>
-                                    <i className="fa-solid fa-phone"></i>
-                                    <a href="tel:+17162752175">
-                                        716-275-2175
-                                    </a>
-                                </li>
-                                <li>
-                                    <i className="fa-solid fa-at"></i>
-                                    <a href="mailto:slmthang2024@gmail.com">
-                                        slmthang2024@gmail.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <i className="fa-brands fa-github"></i>
-                                    <a href="https://github.com/slmthang">
-                                        github.com/slmthang/
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href={myResume} id="resume" download="Resume-SolomonThang">
-                                        Resume <i className="fa-regular fa-circle-down"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <p id="introduction">
-                            Hi, I am Solomon Thang, a passionate Software Developer who enjoys solving problems and buliding cool and impactful softwares.
-                        </p>
-                    </li>
-                </ul>
-            </section>
-    )
+                        <ul className="flex flex-col gap-y-1 sm:gap-y-4 ">
+                            <li className="flex gap-2">
+                                <a
+                                    href="tel:+17162752175"
+                                    className="flex gap-2"
+                                >
+                                    {' '}
+                                    <Phone /> : 716-275-2175
+                                </a>
+                            </li>
+                            <li className="flex gap-2">
+                                <a
+                                    href="mailto:slmthang23@gmail.com"
+                                    className="flex gap-2"
+                                >
+                                    <Mail /> : slmthang23@gmail.com
+                                </a>
+                            </li>
+                            <li className="flex gap-2">
+                                <a
+                                    href="https://github.com/slmthang23"
+                                    aria-label="Go to my github profile"
+                                    className="flex gap-2"
+                                >
+                                    <Link /> : github.com/slmthang23/
+                                </a>
+                            </li>
+                            <li className="flex gap-2">
+                                <a
+                                    href={myResume}
+                                    id="resume"
+                                    download="Resume-SolomonThang"
+                                    className="flex gap-2"
+                                >
+                                    <Download /> : Resume
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p className="px-4 text-justify">
+                        <div className="border-t-1 border-border1 my-[2rem]" />
+                        Hi, I am{' '}
+                        <span className="text-primary">Solomon Thang</span>. I
+                        enjoy solving problems and building impactful technology
+                        solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
 }

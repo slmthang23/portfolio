@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* * {
+  box-sizing: border1-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} */
+
+@theme {
+    --color-bg1: #0a0a0a;
+    --color-bg2: #201d1dad;
+    --color-primary: green;
+    --color-text1: rgba(255, 255, 255, 0.85);
+    --color-text2: rgba(255, 255, 255, 0.65);
+
+    --color-border1: rgba(0, 128, 0, 0.6);
+    --color-border2: rgba(0, 128, 0, 0.3);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

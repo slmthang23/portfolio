@@ -1,138 +1,91 @@
-
-import { useState } from "react"
-import "./Projects.scss"
-import calendarImg from '../assets/calendar.jpg';
-import chatImg from '../assets/chat.jpg';
-import sentenceGenImg from '../assets/sentenceGen.jpg';
-import sentimentAnalyzer from '../assets/sentimentAnalyzer.jpg';
-
+import { Globe } from 'lucide-react';
 
 export default function Projects() {
-
     return (
-            <div id="projects-cont" className="center">
+        <section className="w-full center flex-col">
+            <header className="w-full center sticky top-0 h-[3rem] border-y-1 border-border1 bg-bg1">
+                <p className="text-xl font-extrabold text-primary">Projects</p>
+            </header>
 
-                <header className="section-title center"><h2>Projects</h2></header>
-
-                <ul id="projects" className="center">
-                    <li className="project boxShadow">
-                        <div className="center">
-                                <div className="center">
-                                    <h1>Calendar App</h1>
-                                    <h2>~ HTML, CSS, JavaScript, Flask, MySql, MongoDB & Docker</h2>
-                                </div>
-                        </div>
-                        
-                        <div id="screenshot" className="center">
-                            <img src={calendarImg} alt="calendar app screenshot" loading="lazy"/>
+            <div className="w-full flex flex-col justify-center items-start my-[2rem]">
+                <ul className="flex flex-col gap-y-[2rem] px-4">
+                    <li className="border-1 border-border1 pb-[1rem]">
+                        <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">
+                            <h2 className="text-lg font-semibold">Pockeep</h2>
+                            <p className="text-sm text-text2">
+                                ~ Django & React
+                            </p>
                         </div>
 
-                        <ul>
-                            <li>a web-based calendar app that provides an interactive calendar</li>
-                            <li>can create, manage and see all of their calendar data across all devices, and all in one place</li>
-                            <li>simple and clean UI of the app allows users to organize and plan their days with ease</li>
+                        <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
+                            <li className="list-disc">
+                                A finance tracker that helps users to easily
+                                monitor where their money comes from and where
+                                it goes
+                            </li>
+                            <li className="list-disc">
+                                visualizes cash flow, organizes budgets, tracks
+                                debts, and monitors savings progress — all in
+                                one place
+                            </li>
                         </ul>
+                        <a href="https://www.pockeep.com">
+                            <div className="flex items-center pl-4">
+                                <span className="mr-2 italic">Live Site:</span>{' '}
+                                <Globe className="text-primary" />
+                            </div>
+                        </a>
+                    </li>
+                    <li className="border-1 border-border1 pb-[1rem]">
+                        <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">
+                            <h2 className="text-lg font-semibold">IT Systems & Support Home Lab</h2>
+                            <p className="text-sm text-text2">~ Active Directory & osTicket</p>
+                        </div>
 
-                        <ul className="links">
-                            <li>
-                                <a href="https://github.com/slmthang/capp">
-                                    <i className="fa-brands fa-github"></i>
-                                </a>
-                                <a href="">
-                                    <i className="fa-solid fa-link"></i>
-                                </a>
-                            </li>   
+                        <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
+                            <li className="list-disc">
+                                Built a home lab environment using Windows Server to simulate enterprise IT infrastructure
+                            </li>
+                            <li className="list-disc">
+                                Configured Active Directory with users, groups, and Group Policy Objects (GPOs)
+                            </li>
+                            <li className="list-disc">
+                                Deployed and managed a ticketing system using osTicket to simulate helpdesk operations
+                            </li>
+                            <li className="list-disc">
+                                Troubleshot user issues including account access, password resets, and system connectivity
+                            </li>
+                            <li className="list-disc">
+                                Documented common issues and resolutions to improve support workflow
+                            </li>
                         </ul>
                     </li>
-                    <li className="project boxShadow">
-                        <div className="center">
-                                <div className="center">
-                                    <h1>Sentiment Analyzer</h1>
-                                    <h2>~ Python</h2>
-                                </div>
+                     {/* <li className="border-1 border-border1 pb-[1rem]">
+                        <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">
+                            <h2 className="text-lg font-semibold">IT & Network Infrastructure Home Lab</h2>
+                            <p className="text-sm text-text2">~ pfSense, Active Directory & OpenVPN</p>
                         </div>
 
-                        <div id="screenshot" className="center">
-                            <img src={sentimentAnalyzer} alt="sentiment analyzer screenshot" loading="lazy"/>
-                        </div>
-                        
-                        <ul>
-                            <li>program is implemented using the ’Naive Bayes Algorithm’</li>
-                            <li>is trained and tested using a subset of the Pang and Lee 2002 Sentiment Classification / Movie Review data, created by Ted Pedersen (tpederse@d.umn.edu)</li>
-                            <li>program yields 80.8% accuracy based on the testing and training data.</li>
+                        <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
+                            <li className="list-disc">
+                                Built a pfSense‑based network with multiple VLANs (Servers, Clients, VPN), including DHCP, firewall rules, and inter‑VLAN routing
+                            </li>
+                            <li className="list-disc">
+                                Deployed Windows Server 2019/2022 as a Domain Controller with AD DS, DNS, OUs, GPOs, and domain‑joined Windows 10/11 clients
+                            </li>
+                            <li className="list-disc">
+                                Configured WireGuard/OpenVPN remote‑access VPN integrated with pfSense, enabling secure access to internal VLANs
+                            </li>
+                            <li className="list-disc">
+                                Implemented network segmentation and access control policies to isolate client, server, and VPN networks
+                            </li>
+                            <li className="list-disc">
+                                Performed packet analysis and troubleshooting using Wireshark, tcpdump, and Nmap across segmented networks
+                            </li>
                         </ul>
-
-                        <ul className="links">
-                            <li>
-                                <a href="https://github.com/slmthang/sentiment-analyzer">
-                                    <i className="fa-brands fa-github"></i>
-                                </a>
-                                <a href="">
-                                    <i className="fa-solid fa-link"></i>
-                                </a>
-                            </li>   
-                        </ul>
-                    </li>
-                    <li className="project boxShadow">
-                        <div className="center">
-                                <div className="center">
-                                    <h1>Sentence Generator</h1>
-                                    <h2>~ Python</h2>
-                                </div>
-                        </div>
-
-                        <div id="screenshot" className="center">
-                            <img src={sentenceGenImg} alt="sentence generator screenshot" loading="lazy"/>
-                        </div>
-                        
-                        <ul>
-                            <li>a sentence generator that is developed using the n-gram models</li>
-                            <li>program has three models that can be used to generate sentences: uni-gram, bi-gram, and tri-gram</li>
-                            <li>is trained using some text files(ebooks, etc...) and the program will generate sentences using those data</li>
-                            <li>quality of sentences that are generated will depend on the size and quality of the input data, and the n-gram model it is used</li>
-                        </ul>
-
-                        <ul className="links">
-                            <li>
-                                <a href="https://github.com/slmthang/sentence-generator">
-                                    <i className="fa-brands fa-github"></i>
-                                </a>
-                                <a href="">
-                                    <i className="fa-solid fa-link"></i>
-                                </a>
-                            </li>   
-                        </ul>
-                    </li>
-                    <li className="project boxShadow">
-                        <div className="center">
-                                <div className="center">
-                                    <h1>Simple Chat App</h1>
-                                    <h2>~ Python</h2>
-                                </div>
-                        </div>
-
-                        <div id="screenshot" className="center">
-                            <img src={chatImg} alt="chat room app screenshot" loading="lazy"/>
-                        </div>
-                        
-                        <ul>
-                            <li>a simple chat app that allows people to chat online - implemented using websockets</li>
-                            <li>html, css, js as frontend and Flask as backend</li>
-                            <li>features: public chat, private chat, chat history</li>
-                        </ul>
-
-                        <ul className="links">
-                            <li>
-                                <a href="https://github.com/slmthang/chat-app">
-                                    <i className="fa-brands fa-github"></i>
-                                </a>
-                                <a href="">
-                                    <i className="fa-solid fa-link"></i>
-                                </a>
-                            </li>   
-                        </ul>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
-    )
+        </section>
+    );
 }
