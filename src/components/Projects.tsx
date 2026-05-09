@@ -36,6 +36,17 @@ export default function Projects() {
                     visualizes cash flow, organizes budgets, tracks debts, and
                     monitors savings progress — all in one place
                   </li>
+                  <br /> <br />
+
+                  <li className="list-disc mt-[2rem] text-sm italic">
+                    Backend: Django on Railway
+                  </li>
+                  <li className="list-disc text-sm italic">
+                    Database: PostgreSQL on NeonDB
+                  </li>
+                  <li className="list-disc text-sm italic">
+                    Frontend: Vite + React on Netlify
+                  </li>
                 </ul>
                 <a href="https://www.pockeep.com">
                   <div className="flex items-center pl-4 pb-[1rem]">
@@ -53,7 +64,7 @@ export default function Projects() {
             >
               <div>
                 <h2 className="text-lg font-bold">
-                  IT Systems & Support Home Lab
+                  Enterprise Infrastructure & Security Lab
                 </h2>
                 <p className="text-sm text-text2">
                   ~ Active Directory & osTicket
@@ -65,8 +76,23 @@ export default function Projects() {
             {proj2 && (
               <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
                 <li className="list-disc">
-                  Built a home lab environment using Windows Server to simulate
-                  enterprise IT infrastructure
+                  Built and maintained a homelab environment using Proxmox VE to simulate enterprise-level IT infrastructure and virtualization workflows
+                </li>
+
+                <h5 className="text-lg font-bold mt-[2rem] mb-[1rem]">Environment:</h5>
+
+                <ul>
+                    <li className="list-disc ml-8">1 pfSense as Router/VPN/Firewall</li>
+                    <li className="list-disc ml-8">1 Windows 2025 Server for AD</li>
+                    <li className="list-disc ml-8">2 Windows 11 Clients</li>
+                    <li className="list-disc ml-8">1 Kali Machine</li>
+                    <li className="list-disc ml-8">1 Debian Machine</li>
+                  </ul>
+
+                <h5 className="text-lg font-bold mt-[2rem] mb-[1rem]">Accomplishments:</h5>
+
+                <li className="list-disc">
+                  Configured VLANs, VPN access and Firewall Rules on pfSense to enhance network security
                 </li>
                 <li className="list-disc">
                   Configured Active Directory with users, groups, and Group
@@ -74,15 +100,7 @@ export default function Projects() {
                 </li>
                 <li className="list-disc">
                   Deployed and managed a ticketing system using osTicket to
-                  simulate helpdesk operations
-                </li>
-                <li className="list-disc">
-                  Troubleshot user issues including account access, password
-                  resets, and system connectivity
-                </li>
-                <li className="list-disc">
-                  Documented common issues and resolutions to improve support
-                  workflow
+                  simulate various helpdesk operations such as troubleshooting and administrations
                 </li>
               </ul>
             )}
