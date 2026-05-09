@@ -29,13 +29,18 @@ export default function Projects() {
               <>
                 <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
                   <li className="list-disc">
-                    A finance tracker that helps users to easily monitor where
-                    their money comes from and where it goes
+                    A full-featured finance application to track user income, expenses, budgets, savings goals, and debts
                   </li>
                   <li className="list-disc">
-                    visualizes cash flow, organizes budgets, tracks debts, and
-                    monitors savings progress — all in one place
+                    Designed intuitive features for budgeting, goal setting, and financial tracking
                   </li>
+                  <li className="list-disc">
+                    Implemented data persistence and user-friendly interfaces for real-time financial insights
+                  </li>
+                  <li className="list-disc">
+                    Focused on improving user financial awareness and decision-making
+                  </li>
+
                   <br /> <br />
 
                   <li className="list-disc mt-[2rem] text-sm italic">
@@ -67,7 +72,7 @@ export default function Projects() {
                   Enterprise Infrastructure & Security Lab
                 </h2>
                 <p className="text-sm text-text2">
-                  ~ Active Directory & osTicket
+                  ~ Proxmox VE
                 </p>
               </div>
               {proj2 ? <ChevronUp /> : <ChevronDown />}

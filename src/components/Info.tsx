@@ -43,7 +43,7 @@ export default function Info() {
                 <a
                   href={myResume}
                   id="resume"
-                  download="resume-solomon-thang"
+                  download="solomon-thang-resume"
                   className="center gap-2 border-1 border-border1 text-sm text-primary hover:text-gray-900 hover:bg-primary px-2 py-1 rounded-lg"
                 >
                   <Download size={16} /> Resume
