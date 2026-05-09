@@ -1,69 +1,91 @@
-import { Globe } from "lucide-react";
+import { ChevronDown, ChevronUp, Globe } from "lucide-react";
+import { useState } from "react";
 
 export default function Projects() {
+  const [proj1, toggleProj1] = useState(false);
+  const [proj2, toggleProj2] = useState(false);
+
   return (
     <section className="w-full center flex-col">
       <header className="w-full center sticky top-0 h-[3rem] border-y-1 border-border1 bg-bg1">
-        <p className="text-xl font-extrabold text-primary">Projects</p>
+        <p className="text-xl font-black text-primary">Projects</p>
       </header>
 
       <div className="w-full flex flex-col justify-center items-start my-[2rem]">
-        <ul className="flex flex-col gap-y-[2rem] px-4">
-          <li className="border-1 border-border1 pb-[1rem]">
-            <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">
-              <h2 className="text-lg font-semibold">Pockeep</h2>
-              <p className="text-sm text-text2">~ Django & React</p>
-            </div>
-
-            <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
-              <li className="list-disc">
-                A finance tracker that helps users to easily monitor where their
-                money comes from and where it goes
-              </li>
-              <li className="list-disc">
-                visualizes cash flow, organizes budgets, tracks debts, and
-                monitors savings progress — all in one place
-              </li>
-            </ul>
-            <a href="https://www.pockeep.com">
-              <div className="flex items-center pl-4">
-                <span className="mr-2 italic">Live Site:</span>{" "}
-                <Globe className="text-primary" />
+        <ul className="w-full flex flex-col gap-y-[2rem] px-4">
+          <li className="w-full border-1 border-border1">
+            <div
+              className="w-full flex justify-between items-center border-b-1 border-border1 pb-[1rem] p-4 cursor-pointer"
+              onClick={() => toggleProj1((prev) => !prev)}
+            >
+              <div>
+                <h2 className="text-lg font-bold">Pockeep</h2>
+                <p className="text-sm text-text2">~ Django & React</p>
               </div>
-            </a>
-          </li>
-          <li className="border-1 border-border1 pb-[1rem]">
-            <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">
-              <h2 className="text-lg font-semibold">
-                IT Systems & Support Home Lab
-              </h2>
-              <p className="text-sm text-text2">
-                ~ Active Directory & osTicket
-              </p>
+              {proj1 ? <ChevronUp /> : <ChevronDown />}
             </div>
 
-            <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
-              <li className="list-disc">
-                Built a home lab environment using Windows Server to simulate
-                enterprise IT infrastructure
-              </li>
-              <li className="list-disc">
-                Configured Active Directory with users, groups, and Group Policy
-                Objects (GPOs)
-              </li>
-              <li className="list-disc">
-                Deployed and managed a ticketing system using osTicket to
-                simulate helpdesk operations
-              </li>
-              <li className="list-disc">
-                Troubleshot user issues including account access, password
-                resets, and system connectivity
-              </li>
-              <li className="list-disc">
-                Documented common issues and resolutions to improve support
-                workflow
-              </li>
-            </ul>
+            {proj1 && (
+              <>
+                <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
+                  <li className="list-disc">
+                    A finance tracker that helps users to easily monitor where
+                    their money comes from and where it goes
+                  </li>
+                  <li className="list-disc">
+                    visualizes cash flow, organizes budgets, tracks debts, and
+                    monitors savings progress — all in one place
+                  </li>
+                </ul>
+                <a href="https://www.pockeep.com">
+                  <div className="flex items-center pl-4 pb-[1rem]">
+                    <span className="mr-2 italic">Live Site:</span>{" "}
+                    <Globe className="text-primary" />
+                  </div>
+                </a>
+              </>
+            )}
+          </li>
+          <li className="border-1 border-border1">
+            <div
+              className="flex justify-between items-center border-b-1 border-border1 p-4"
+              onClick={() => toggleProj2((prev) => !prev)}
+            >
+              <div>
+                <h2 className="text-lg font-bold">
+                  IT Systems & Support Home Lab
+                </h2>
+                <p className="text-sm text-text2">
+                  ~ Active Directory & osTicket
+                </p>
+              </div>
+              {proj2 ? <ChevronUp /> : <ChevronDown />}
+            </div>
+
+            {proj2 && (
+              <ul className="flex flex-col gap-y-2 pl-8 p-4 mb-[1rem]">
+                <li className="list-disc">
+                  Built a home lab environment using Windows Server to simulate
+                  enterprise IT infrastructure
+                </li>
+                <li className="list-disc">
+                  Configured Active Directory with users, groups, and Group
+                  Policy Objects (GPOs)
+                </li>
+                <li className="list-disc">
+                  Deployed and managed a ticketing system using osTicket to
+                  simulate helpdesk operations
+                </li>
+                <li className="list-disc">
+                  Troubleshot user issues including account access, password
+                  resets, and system connectivity
+                </li>
+                <li className="list-disc">
+                  Documented common issues and resolutions to improve support
+                  workflow
+                </li>
+              </ul>
+            )}
           </li>
           {/* <li className="border-1 border-border1 pb-[1rem]">
                         <div className="border-b-1 border-border1 pb-[1rem] p-4 mb-[1rem]">

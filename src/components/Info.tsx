@@ -6,7 +6,7 @@ export default function Info() {
   return (
     <section className="w-full center flex-col">
       <header className="w-full center sticky top-0 h-[3rem] border-y-1 border-border1 bg-bg1">
-        <h1 className="text-xl font-extrabold text-primary">Solomon Thang</h1>
+        <h1 className="text-xl font-black text-primary">Solomon Thang</h1>
       </header>
 
       <div className="center my-[2rem]">
@@ -54,7 +54,9 @@ export default function Info() {
           <p className="px-4 text-justify">
             <div className="border-t-1 border-border1 my-[2rem]" />
             Hi, I am <span className="text-primary">Solomon Thang</span>. I
-            enjoy solving problems and building impactful technology solutions.
+            enjoy solving complex problems and building impactful technology
+            solutions, with a strong passion for software engineering and IT
+            infrastructure.
           </p>
         </div>
       </div>

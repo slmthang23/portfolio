@@ -8,7 +8,7 @@ export default function Experiences() {
       <ul id="experiences" className="center">
         <li className="experience boxShadow">
           <div className="center">
-            <h1>Position</h1>
+            <h1 className="font-bold">Position</h1>
             <h2>~ Company Name | 00/0000-99/9999</h2>
           </div>
 

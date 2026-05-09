@@ -2,7 +2,7 @@ export default function Skills() {
   return (
     <section className="w-full center flex-col">
       <header className="w-full center sticky top-0 h-[3rem] border-y-1 border-border1 bg-bg1">
-        <p className="text-xl font-extrabold text-primary">Skills</p>
+        <p className="text-xl font-black text-primary">Skills</p>
       </header>
 
       <div className="w-full flex flex-col justify-center items-start my-[2rem] px-4">
